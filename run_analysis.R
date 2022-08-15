@@ -134,3 +134,7 @@ summarise <- mean_and_std %>%
   group_by(subject, label) %>%
   summarise_if(is.numeric, mean)
 
+#to get your data to local disc
+install.packages("writexl")
+library("writexl")
+write_xlsx(summarise,"./data/samsung_galaxy\\summarise.xlsx")
